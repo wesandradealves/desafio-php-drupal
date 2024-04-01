@@ -1,0 +1,19 @@
+// 0. Config
+
+@import "breakpoints";
+@import "fonts";
+@import "colors";
+@import "util";
+@import "reset";
+@import "objects";
+@import "general";
+
+// 1. Components
+
+@import "../../templates/components/header/style.scss";
+@import "../../templates/components/footer/style.scss";
+@import "../../templates/regions/region--sidebar/style.scss";
+@import "../../templates/block/form--search-block-form/style.scss";
+
+// 2. Navigation
+@import "../../templates/navigation/block--navegacaoprincipal/style.scss"

@@ -1,0 +1,57 @@
+@keyframes opacity {
+    from {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    to {
+        opacity: 1;
+        visibility: visible;
+    } 
+}
+
+html, body {
+    @include toRem(font-size, 16);
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: color(primary, base);
+    min-width: 375px;
+    animation: opacity 600ms forwards;
+    font-weight: 500;
+    line-height: 1.8;
+    overflow-x: hidden;
+    * {
+        &:not([class*="fa"]) {
+            font-family: inherit;
+        }
+    }
+    p {
+        font-weight: 400;
+        line-height: 1.4;
+        strong, b {
+            font-weight: bold;
+        }
+        word-break: break-word;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        * {
+            word-break: inherit;
+            word-wrap: inherit;
+            overflow-wrap: inherit;
+        }    
+    }
+
+    @for $i from 1 through 3 {
+        h#{$i} {
+            font-weight: bold;
+            word-break: break-word;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+    }   
+}
+
+.flex-fill {
+    flex: 1 !important
+}

@@ -1,0 +1,16 @@
+#search-block-form {
+    gap: 0 12px;
+    display: block;
+    #field__edit-keys {
+        gap: 0 12px;
+        input {
+            width: 100%;
+        }
+    }
+    button, input {
+        border: 0;
+        padding: 0;
+        margin: 0;
+        background-color: transparent;
+    }
+}

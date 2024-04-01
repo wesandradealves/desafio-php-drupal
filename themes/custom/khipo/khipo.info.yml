@@ -1,0 +1,22 @@
+name: Khipo 
+type: theme
+description: "Bem-vindo à Khipo: Descubra o poder da inovação tecnológica na Khipo. Seja bem-vindo a um mundo onde ideias se tornam realidade, impulsionadas por soluções criativas e expertise incomparável. Explore o potencial ilimitado do futuro conosco."
+core_version_requirement: ">=9"
+base theme: bootstrap_barrio
+
+libraries:
+  - khipo/bootstrap
+  - khipo/fontawesome
+  - khipo/global-styling
+
+regions:
+  header: 'Header'
+  sidebar: 'Sidebar'
+  content: 'Content'
+  footer: 'Footer'
+  
+components:
+  namespaces:
+    partials:
+      - templates/partials
+      - templates/components

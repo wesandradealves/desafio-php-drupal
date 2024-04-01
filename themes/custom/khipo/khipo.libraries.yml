@@ -1,0 +1,36 @@
+global-styling:
+  dependencies:
+    - core/drupal.dialog.ajax
+    - core/jquery
+    - core/drupal
+  js:
+    //cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8/jquery.inputmask.min.js:
+      {}
+    assets/js/scripts.js: {}
+  css:
+    theme:
+      assets/css/style.scss: {}
+
+bootstrap:
+  dependencies:
+    - core/jquery
+  js:
+    //cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/js/bootstrap.min.js: {}
+  css:
+    component:
+      //cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap.min.css: {}
+      //cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap-grid.min.css:
+        {}
+      //cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap-reboot.min.css:
+        {}
+      //cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.1/css/bootstrap-utilities.min.css:
+        {}
+
+fontawesome:
+  dependencies:
+    - core/jquery
+  js:
+    https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js: {}
+  css:
+    component:
+      //cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css: {}

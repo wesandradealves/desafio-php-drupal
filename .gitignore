@@ -1,0 +1,25 @@
+# .gitignore file
+*
+!composer.*
+!.gitignore
+!config
+!config/*
+!config/*/**
+!themes
+!themes/*
+!themes/*/**
+!libraries
+!libraries/*
+!libraries/*/**
+!dumps
+!dumps/*
+!modules
+!modules/*
+modules/contrib
+!modules/custom/**
+!sites
+!sites/*
+!sites/default/settings.php
+!load.environment.php
+# Ignore .env files as they are personal
+.env

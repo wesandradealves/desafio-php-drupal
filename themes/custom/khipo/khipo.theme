@@ -1,0 +1,79 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the SASS Starterkit subtheme.
+ */
+use Drupal\block\Entity\Block;
+use Drupal\views\ViewExecutable;
+
+# 0. Config
+require_once 'util/util.inc';
+require_once 'util/suggestions.inc';
+require_once 'util/settings.inc';
+
+# 1. Components
+require_once 'templates/block/form--search-block-form/index.inc';
+
+function khipo_preprocess_html(&$variables)
+{
+  $variables['descricao'] = theme_get_setting('descricao');
+
+  if(theme_get_setting('logo.url')) {
+    $variables['logo'] = \Drupal::service('file_url_generator')->generateAbsoluteString(theme_get_setting('logo.url'));
+  }
+  
+  $node = \Drupal::routeMatch()->getParameter('node');
+
+  if ($node instanceof \Drupal\node\NodeInterface) {
+    $variables['alias'] = str_replace("/", "", \Drupal::service('path_alias.manager')->getAliasByPath('/node/'.$node->id()));
+  }  
+}
+
+function khipo_preprocess_page(&$variables)
+{
+  $variables['is_front'] = \Drupal::service('path.matcher')->isFrontPage();
+}
+
+function khipo_preprocess_block(&$variables)
+{
+  $variables['configuration'] = $variables['elements']['#configuration'];
+  $variables['block_title'] = $variables['configuration']['label']; 
+
+  if ( isset($variables['elements']['content']['#block_content'])) {
+    $variables['uuid'] = $variables['elements']['content']['#block_content']->uuid();
+  }   
+}
+
+function khipo_preprocess_block_content(&$variables)
+{
+  
+  $entity = $variables['elements']['#block_content'];
+
+  $blocks = Block::loadMultiple();
+
+  foreach ($blocks as $key => $block) {
+    $uuid = $block->getPlugin()->getDerivativeId();
+
+    if ($uuid) {
+      $block_content = \Drupal::service('entity.repository')->loadEntityByUuid('block_content', $uuid);
+
+      if ($block_content == $entity) {
+        $settings = $block->get('settings');
+        $variables['label_display'] = $settings['label_display'];
+        $variables['label'] = $settings['label'];
+      }
+    }
+  }
+}
+
+function khipo_preprocess_views_view_unformatted(&$variables) {
+  $view = $variables['view'];
+  $variables['display'] = $view->getDisplay()->display;
+}
+
+function khipo_views_pre_render(ViewExecutable $view) {
+  if (empty($view->result) && isset($view->exposed_widgets)) {
+    $view->exposed_widgets = TRUE;
+  }
+}

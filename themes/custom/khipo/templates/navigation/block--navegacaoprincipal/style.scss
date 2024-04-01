@@ -1,0 +1,10 @@
+#block-navegacaoprincipal {
+    .nav {
+        font-weight: 400;
+        &-item {
+            &:hover {
+                color: white;
+            }
+        }
+    }   
+}
