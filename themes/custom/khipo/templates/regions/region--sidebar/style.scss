@@ -2,5 +2,9 @@
     .block {
         border: none;
         padding: 0;
+        .title {
+            color: color(primary, base);
+            @include toRem(font-size, 24);
+        }
     }
 }

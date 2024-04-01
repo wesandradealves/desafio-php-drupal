@@ -9,11 +9,20 @@
 @import "general";
 
 // 1. Components
-
 @import "../../templates/components/header/style.scss";
 @import "../../templates/components/footer/style.scss";
+@import "../../templates/components/pager/style.scss";
 @import "../../templates/regions/region--sidebar/style.scss";
+
+// 1.1 Blocks
 @import "../../templates/block/form--search-block-form/style.scss";
+@import "../../templates/block/block--categories/style.scss";
 
 // 2. Navigation
-@import "../../templates/navigation/block--navegacaoprincipal/style.scss"
+@import "../../templates/navigation/block--navegacaoprincipal/style.scss";
+
+// 3. Views
+@import "../../templates/views/views-view--content-recent/style.scss";
+
+// 4. Pages
+@import "../../templates/page/page--front/style.scss";

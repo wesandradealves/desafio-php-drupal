@@ -1,0 +1,23 @@
+#block-categories {
+    nav {
+        ul {
+            display: flex;
+            flex-flow: column;
+            gap: 8px;
+            > li {
+                padding-bottom: 8px;
+                border-bottom: 1px color(primary, light) dotted;
+                color: color(primary, dark);
+                @include toRem(font-size, 14);
+                font-weight: bold;
+                &:hover {
+                    color: color(primary, medium);
+                }
+                a {
+                    color: inherit;
+                    display: block;
+                }                
+            }
+        }
+    }
+}

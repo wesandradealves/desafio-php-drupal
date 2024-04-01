@@ -1,5 +1,6 @@
 $palettes: (
-    primary: (base: #0c0c0c, dark: #3c3c3c, medium: #a7a7a7),
+    primary: (base: #0c0c0c, dark: #3c3c3c, medium: #a7a7a7, light: #cecece),
+    secondary: (base: #af72f6),
 );
 
 @function color($color,$tone){

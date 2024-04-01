@@ -14,6 +14,7 @@ require_once 'util/settings.inc';
 
 # 1. Components
 require_once 'templates/block/form--search-block-form/index.inc';
+require_once 'templates/block/block--categories/index.inc';
 
 function khipo_preprocess_html(&$variables)
 {

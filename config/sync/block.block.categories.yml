@@ -1,0 +1,25 @@
+uuid: b6a6e805-44bc-4d3f-9bbf-062a26c9070f
+langcode: pt-br
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:95476a6c-6e72-41f3-8063-a52af5184c8a'
+  module:
+    - block_content
+  theme:
+    - khipo
+id: categories
+theme: khipo
+region: sidebar
+weight: -2
+provider: null
+plugin: 'block_content:95476a6c-6e72-41f3-8063-a52af5184c8a'
+settings:
+  id: 'block_content:95476a6c-6e72-41f3-8063-a52af5184c8a'
+  label: Categorias
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

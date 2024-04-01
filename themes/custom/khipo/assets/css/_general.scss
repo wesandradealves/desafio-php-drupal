@@ -20,6 +20,7 @@ html, body {
     animation: opacity 600ms forwards;
     font-weight: 500;
     line-height: 1.8;
+    background-color: whitesmoke;
     overflow-x: hidden;
     * {
         &:not([class*="fa"]) {
@@ -54,4 +55,8 @@ html, body {
 
 .flex-fill {
     flex: 1 !important
+}
+
+.main {
+    padding: 130px 0;
 }

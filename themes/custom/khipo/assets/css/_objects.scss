@@ -1,0 +1,67 @@
+.grid {
+    margin: 0 0 -16px;
+    @media screen and (min-width: $screen-md-min) {
+        margin: 0 -16px -16px;
+    }
+    .views-row {
+        padding: 0 0 16px;
+        @media screen and (min-width: $screen-md-min) {
+            padding: 0 16px 16px;
+        }
+        .inner {
+            border: 1px solid color(primary, light);
+            border-radius: 16px;
+            padding: 32px;
+            overflow: hidden;
+            height: 100%;
+            transition: 600ms ease border-color;
+            background-color: white;
+            &:hover {
+                border: 1px solid color(secondary, light);
+                .views-field-field-image {
+                    border-radius: 0;
+                    img {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+            .views-field-field-tags {
+                margin-bottom: 16px;
+                @include toRem(font-size, 12);
+                color: color(primary, light);
+            }
+            .views-field-title {
+                @include toRem(font-size, 24);
+                color: color(primary, base);
+                font-weight: bold;
+                a {
+                    color: inherit;
+                }
+            }
+            .views-field-field-category {
+                color: color(secondary, base);
+                font-weight: bold;
+                @include toRem(font-size, 16);
+            }
+            .views-field-field-image {
+                margin: -32px -32px 32px;
+                overflow: hidden;
+                border-radius: 0 0 16px 16px;
+                height: 245px;
+                transition: 600ms ease all;
+                img {
+                    width: 100%;
+                    max-width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: inherit
+                }
+            }
+        }
+    }
+}
+
+.section-title {
+    @include toRem(font-size, 48);
+    text-align: center;
+}

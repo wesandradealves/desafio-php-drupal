@@ -9,7 +9,7 @@ dependencies:
 id: formulariodebusca
 theme: khipo
 region: sidebar
-weight: 0
+weight: -3
 provider: null
 plugin: search_form_block
 settings:
