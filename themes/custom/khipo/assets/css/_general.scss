@@ -60,3 +60,9 @@ html, body {
 .main {
     padding: 130px 0;
 }
+
+.primary {
+    > [class*="container"] {
+        gap: 32px;
+    }
+}

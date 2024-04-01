@@ -59,6 +59,9 @@ function khipo_theme_suggestions_views_view_alter(
     array $variables, $hook
 ) {
     $node = \Drupal::routeMatch()->getParameter("node");
+    $suggestions[] = $hook."__" . $variables['view']->id();
+    $suggestions[] = $hook."__" . $variables['view']->id(). '__' . $variables['view']->getDisplay()->display['id'];
+    
     if ($node) {
         $content_type = $node->bundle();
         $suggestions[] = $hook."__" . $content_type;

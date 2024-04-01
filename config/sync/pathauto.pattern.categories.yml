@@ -1,0 +1,23 @@
+uuid: 110e05db-fa21-489e-a5de-61be5fbc1727
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: categories
+label: Category
+type: 'canonical_entities:taxonomy_term'
+pattern: '[term:vocabulary:vid]/[term:name]'
+selection_criteria:
+  b98fdcfe-200c-4fe5-b2d4-d18353ab44db:
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: b98fdcfe-200c-4fe5-b2d4-d18353ab44db
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      category: category
+      tags: tags
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,40 @@
+uuid: 063db205-beab-4fc6-93b2-c19c876f93a3
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - views.view.content_recent
+  module:
+    - blocache
+    - system
+    - views
+  theme:
+    - khipo
+third_party_settings:
+  blocache:
+    overridden: true
+    metadata:
+      max-age: 1
+      contexts:
+        - 'languages:language_interface'
+      tags:
+        - 'config:block.block.views_block__content_recent_block_2'
+id: views_block__content_recent_block_2
+theme: khipo
+region: content
+weight: -3
+provider: null
+plugin: 'views_block:content_recent-block_2'
+settings:
+  id: 'views_block:content_recent-block_2'
+  label: 'Artigos relacionados'
+  label_display: visible
+  provider: views
+  context_mapping: {  }
+  views_label: 'Artigos relacionados'
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/blog/*'

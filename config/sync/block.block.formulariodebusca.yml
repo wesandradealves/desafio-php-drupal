@@ -3,9 +3,19 @@ langcode: pt-br
 status: true
 dependencies:
   module:
+    - blocache
     - search
   theme:
     - khipo
+third_party_settings:
+  blocache:
+    overridden: true
+    metadata:
+      max-age: 1
+      contexts:
+        - 'languages:language_interface'
+      tags:
+        - 'config:block.block.formulariodebusca'
 id: formulariodebusca
 theme: khipo
 region: sidebar

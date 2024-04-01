@@ -1,4 +1,4 @@
-uuid: 06d00e69-f10c-4019-923e-4178b996287e
+uuid: d5c956dd-d661-4f3c-a601-6f372e2a51b4
 langcode: pt-br
 status: true
 dependencies:
@@ -13,23 +13,21 @@ dependencies:
     - node
     - text
     - user
-_core:
-  default_config_hash: YqZN5rc7XDQcFcInc8wkzuaHJmC5YvirhTmDcrarT6M
-id: content_recent
-label: 'Conteúdo recente'
-module: node
-description: 'Conteúdo recente.'
-tag: default
+id: search
+label: Search
+module: views
+description: ''
+tag: ''
 base_table: node_field_data
 base_field: nid
 display:
   default:
     id: default
-    display_title: Padrão
+    display_title: Default
     display_plugin: default
     position: 0
     display_options:
-      title: 'Conteúdo recente'
+      title: Search
       fields:
         field_image:
           id: field_image
@@ -185,7 +183,7 @@ display:
           element_class: ''
           element_label_type: ''
           element_label_class: ''
-          element_label_colon: false
+          element_label_colon: true
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
@@ -193,9 +191,20 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
+          click_sort_column: value
           type: string
           settings:
             link_to_entity: true
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
         field_tags:
           id: field_tags
           table: node__field_tags
@@ -248,7 +257,7 @@ display:
           click_sort_column: target_id
           type: entity_reference_label
           settings:
-            link: false
+            link: true
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -370,7 +379,7 @@ display:
           admin_label: ''
           plugin_id: text_custom
           empty: true
-          content: 'Nenhum conteúdo disponível.'
+          content: '<p class="d-block text-center">Nenhum resultado encontrado</p>'
           tokenize: false
       sorts:
         created:
@@ -391,87 +400,19 @@ display:
           granularity: second
       arguments: {  }
       filters:
-        status_extra:
-          id: status_extra
+        status:
+          id: status
           table: node_field_data
-          field: status_extra
-          relationship: none
-          group_type: group
-          admin_label: ''
+          field: status
           entity_type: node
-          plugin_id: node_status
-          operator: '='
-          value: false
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
           group: 1
-          exposed: false
           expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
             operator: ''
             operator_limit_selection: false
             operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-        langcode:
-          id: langcode
-          table: node_field_data
-          field: langcode
-          relationship: none
-          group_type: group
-          admin_label: ''
-          entity_type: node
-          entity_field: langcode
-          plugin_id: language
-          operator: in
-          value:
-            '***LANGUAGE_language_content***': '***LANGUAGE_language_content***'
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
         type:
           id: type
           table: node_field_data
@@ -514,12 +455,52 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
+        combine:
+          id: combine
+          table: views
+          field: combine
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: combine
+          operator: word
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: combine_op
+            label: Pesquise
+            description: ''
+            use_operator: false
+            operator: combine_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: keys
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          fields:
+            title: title
       style:
         type: default
-        options:
-          grouping: {  }
-          row_class: ''
-          default_row_class: true
       row:
         type: fields
       query:
@@ -531,23 +512,7 @@ display:
           replica: false
           query_tags: {  }
       relationships: {  }
-      use_more: false
-      use_more_always: false
-      use_more_text: Mais
-      link_display: '0'
-      link_url: ''
-      header:
-        area_text_custom:
-          id: area_text_custom
-          table: views
-          field: area_text_custom
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: text_custom
-          empty: false
-          content: '<h2 class="section-title mb-4">Artigos Recentes</h2>'
-          tokenize: false
+      header: {  }
       footer: {  }
       display_extenders: {  }
     cache_metadata:
@@ -555,8 +520,8 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url
         - url.query_args
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags:
@@ -564,109 +529,21 @@ display:
         - 'config:field.storage.node.field_category'
         - 'config:field.storage.node.field_image'
         - 'config:field.storage.node.field_tags'
-  block_1:
-    id: block_1
-    display_title: 'Artigos recentes'
-    display_plugin: block
+  page_1:
+    id: page_1
+    display_title: Page
+    display_plugin: page
     position: 1
     display_options:
-      title: 'Artigos recentes'
-      defaults:
-        title: false
-      display_description: ''
       display_extenders: {  }
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - url.query_args
-        - user
-        - 'user.node_grants:view'
-        - user.permissions
-      tags:
-        - 'config:field.storage.node.body'
-        - 'config:field.storage.node.field_category'
-        - 'config:field.storage.node.field_image'
-        - 'config:field.storage.node.field_tags'
-  block_2:
-    id: block_2
-    display_title: 'Artigos relacionados'
-    display_plugin: block
-    position: 1
-    display_options:
-      title: 'Artigos relacionados'
-      pager:
-        type: some
-        options:
-          offset: 0
-          items_per_page: 3
-      arguments:
-        field_category_target_id:
-          id: field_category_target_id
-          table: node__field_category
-          field: field_category_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: numeric
-          default_action: default
-          exception:
-            value: all
-            title_enable: false
-            title: All
-          title_enable: false
-          title: ''
-          default_argument_type: token
-          default_argument_options:
-            argument: '[node:field_category:target_id]'
-            process: 0
-            and_or: +
-            all_option: 0
-            debug: 0
-          default_argument_skip_url: false
-          summary_options:
-            base_path: ''
-            count: true
-            override: false
-            items_per_page: 25
-          summary:
-            sort_order: asc
-            number_of_records: 0
-            format: default_summary
-          specify_validation: false
-          validate:
-            type: none
-            fail: 'not found'
-          validate_options: {  }
-          break_phrase: false
-          not: false
-      defaults:
-        title: false
-        pager: false
-        arguments: false
-        header: false
-      display_description: ''
-      header:
-        area_text_custom:
-          id: area_text_custom
-          table: views
-          field: area_text_custom
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: text_custom
-          empty: false
-          content: '<h2 class="section-title mb-4">Artigos Relacionados</h2>'
-          tokenize: false
-      display_extenders: {  }
+      path: search/node
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
         - url
-        - user
+        - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags:

@@ -1,0 +1,65 @@
+.node--type-blog {
+    .main {
+        padding-top: 0;
+        .single-post {
+            .post-header {
+                margin-bottom: 150px;
+                background-color: color(primary, base);
+                color: white;
+                [class*="container"] {
+                    padding-top: calc(10rem - 104px);
+                    gap: 24px 0;
+                    .title {
+                        gap: 12px 0;
+                        @include toRem(font-size, 32);
+                        @media screen and (min-width: $screen-md-min) {
+                            @include toRem(font-size, 64);
+                        }
+                        .category {
+                            background-color: color(secondary, dark);
+                            color: color(secondary, light);
+                            @include toRem(font-size, 14);
+                            padding: .5rem .75rem;
+                            border-radius: 0.5rem;
+                            font-weight: 400;
+                            a {
+                                color: inherit;
+                            }
+                        }
+                    }
+                    .thumbnail {
+                        margin-bottom: -150px;
+                        img {
+                            object-fit: cover;
+                            border-radius: 16px;
+                            width: 100%;
+                            height: 300px;
+                            @media screen and (min-width: $screen-sm-min) {
+                                height: 400px;
+                                @media screen and (min-width: $screen-md-min) {
+                                    height: 500px;
+                                }                            
+                            }
+                            position: relative;   
+                        }
+                    }
+                }
+            }
+            .post-content {
+                .text {
+                    font-weight: 300;
+                    @include toRem(font-size, 16);
+                    @media screen and (min-width: $screen-md-min) {
+                        @include toRem(font-size, 18);
+                    }                    
+                    p {
+                        line-height: 1.5;
+                    }
+                }
+            }
+            [class*="container"] {
+                max-width: 814px;
+            }
+        }        
+    }
+}

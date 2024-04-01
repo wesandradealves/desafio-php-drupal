@@ -55,6 +55,7 @@
         "drupal/scroll_top_button": "^2.0",
         "drupal/scss": "2.0.x-dev@dev",
         "drupal/scss_compiler": "^1.2",
+        "drupal/search_api": "^1.30",
         "drupal/seven": "^1.0",
         "drupal/smtp": "1.2",
         "drupal/stage_file_proxy": "^2.1",

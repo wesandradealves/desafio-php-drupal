@@ -16,6 +16,10 @@ require_once 'util/settings.inc';
 require_once 'templates/block/form--search-block-form/index.inc';
 require_once 'templates/block/block--categories/index.inc';
 
+# 2. Views
+require_once 'templates/views/views-view--taxonomy-term/index.inc';
+require_once 'templates/views/views-view--search/index.inc';
+
 function khipo_preprocess_html(&$variables)
 {
   $variables['descricao'] = theme_get_setting('descricao');

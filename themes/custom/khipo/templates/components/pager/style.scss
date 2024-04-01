@@ -1,0 +1,32 @@
+.pager {
+    &__items {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;  
+        gap: 0 16px;
+    }
+    &__item {
+        padding: 6px 12px;
+        border-radius: 6px;
+        background-color: rgba(0,0,0,.03);
+        color: color(primary, dark);
+        font-weight: bold;
+        @include toRem(font-size, 14);
+        &.is-active {
+            background-color: color(secondary, base);
+            color: white;
+            font-weight: 400;
+        }
+        a {
+            color: inherit;
+            display: flex;
+            align-items: center;
+            gap: 0 4px;
+            svg {
+                position: relative;
+                top: 1px;
+            }
+        }
+    }
+}

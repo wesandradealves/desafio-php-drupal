@@ -17,7 +17,7 @@
             transition: 600ms ease border-color;
             background-color: white;
             &:hover {
-                border: 1px solid color(secondary, light);
+                border: 1px solid color(secondary, base);
                 .views-field-field-image {
                     border-radius: 0;
                     img {
@@ -29,6 +29,9 @@
                 margin-bottom: 16px;
                 @include toRem(font-size, 12);
                 color: color(primary, light);
+                a {
+                    color: inherit;
+                }                
             }
             .views-field-title {
                 @include toRem(font-size, 24);
@@ -42,6 +45,9 @@
                 color: color(secondary, base);
                 font-weight: bold;
                 @include toRem(font-size, 16);
+                a {
+                    color: inherit;
+                }                
             }
             .views-field-field-image {
                 margin: -32px -32px 32px;
@@ -64,4 +70,11 @@
 .section-title {
     @include toRem(font-size, 48);
     text-align: center;
+    small {
+        @include toRem(font-size, 14);
+        font-weight: 300;
+        strong, b {
+            font-weight: bold;
+        }
+    }
 }
