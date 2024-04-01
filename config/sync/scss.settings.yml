@@ -1,0 +1,11 @@
+_core:
+  default_config_hash: jhooJpLGaG3mpq6f9KTsSyz7uwvvaA-dtIXOJKp53LY
+active: false
+theme_to_watch: seven
+scss_directory: scss
+css_directory: css
+output_formatting: expanded
+source_maps: true
+additional_import_paths: ''
+additional_paths_to_watch: ''
+langcode: pt-br

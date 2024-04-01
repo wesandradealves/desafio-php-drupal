@@ -1,0 +1,21 @@
+uuid: 3d1b27b1-2f1f-4193-a82a-f9bb428cf025
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - khipo
+id: formulariodebusca
+theme: khipo
+region: sidebar
+weight: 0
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Formulário de busca'
+  label_display: '0'
+  provider: search
+  page_id: ''
+visibility: {  }

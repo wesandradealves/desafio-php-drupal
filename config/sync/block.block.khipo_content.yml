@@ -1,0 +1,22 @@
+uuid: ea8142ff-48c1-48a2-bcc9-93c5b7a6c346
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - khipo
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: khipo_content
+theme: khipo
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Conteúdo da página principal'
+  label_display: '0'
+  provider: system
+visibility: {  }

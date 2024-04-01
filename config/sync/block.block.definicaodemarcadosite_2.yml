@@ -1,0 +1,23 @@
+uuid: 2b25a887-7dee-4905-96f0-e94cfd89abb9
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - khipo
+id: definicaodemarcadosite_2
+theme: khipo
+region: footer
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Definição de marca do site'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

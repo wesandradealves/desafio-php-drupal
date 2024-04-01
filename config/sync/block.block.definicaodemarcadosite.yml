@@ -1,0 +1,23 @@
+uuid: 4056c102-df9b-4e07-99ec-814f07b4c29d
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - khipo
+id: definicaodemarcadosite
+theme: khipo
+region: header
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Definição de marca do site'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }
