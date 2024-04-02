@@ -52,8 +52,6 @@ class BlogTools extends BlockBase
       $user->user_picture_rendered = file_create_url($user->user_picture->entity->getFileUri());      
     }      
 
-    dump( $this->getConfiguration());
-
     $build = [
       '#theme' => 'khipo_blog_tools',
       '#attached' => array(
