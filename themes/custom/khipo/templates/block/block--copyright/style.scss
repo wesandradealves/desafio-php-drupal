@@ -1,0 +1,15 @@
+#block-copyright {
+    padding-top: 50px;
+    margin-top: 50px;
+    border-top: 1px color(primary, dark) solid;
+    [rel="top"] {
+        height: 30px;
+        width: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+        color: color(primary, dark);
+        border: 1px color(primary, dark) solid;
+    }
+}

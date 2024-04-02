@@ -15,6 +15,7 @@ html, body {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+    scroll-behavior: smooth;
     color: color(primary, base);
     min-width: 375px;
     animation: opacity 600ms forwards;
@@ -58,7 +59,7 @@ html, body {
 }
 
 .main {
-    padding: 130px 0;
+    padding: 212px 0 130px;
 }
 
 .primary {

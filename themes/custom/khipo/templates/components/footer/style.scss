@@ -1,4 +1,8 @@
 .footer {
     background-color: color(primary, base);
     color: color(primary, medium);
+    [class*="container"] {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
 }

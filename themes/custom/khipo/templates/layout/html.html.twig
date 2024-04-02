@@ -63,10 +63,10 @@
     <a href="#main-content" class="visually-hidden focusable skip-link">
       {{ 'Skip to main content'|t }}
     </a>
-    <div id="wrap" class="d-flex flex-column vh-100 overflow-x-hidden">
+    <div id="wrap" class="d-flex flex-column overflow-x-hidden">
       {% if page.header %}
         <header class="header col-12">
-          <div class="container d-flex flex-wrap align-items-center justify-content-between pt-4 pb-4">
+          <div class="container d-flex flex-wrap align-items-center justify-content-between">
             {{page.header}}
           </div>
         </header>   
@@ -80,7 +80,7 @@
 
       {% if page.footer %}
         <footer class="footer col-12">
-          <div class="container d-flex flex-wrap pt-4 pb-4">
+          <div class="container d-flex flex-wrap">
             {{page.footer}}
           </div>
       </footer>         

@@ -1,4 +1,17 @@
 .header {
-    background-color: color(primary, base);
+    background-color: rgba(12,12,12,.9);
+    // background-color: color(primary, base);
     color: color(primary, medium);
+    -webkit-backdrop-filter: blur(24px);
+    backdrop-filter: blur(24px);    
+    [class*="container"] {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: 800ms ease-in-out top;
+    position: fixed;
+    z-index: 99;
 }
