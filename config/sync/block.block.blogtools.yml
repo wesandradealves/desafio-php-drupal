@@ -1,0 +1,25 @@
+uuid: cf10d277-a988-4a18-b433-83145f253bdb
+langcode: pt-br
+status: true
+dependencies:
+  module:
+    - khipo_blog_tools
+    - system
+  theme:
+    - khipo
+id: blogtools
+theme: khipo
+region: content
+weight: -4
+provider: null
+plugin: khipo_blog_tools_block
+settings:
+  id: khipo_blog_tools_block
+  label: Author
+  label_display: '0'
+  provider: khipo_blog_tools
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/blog/*'

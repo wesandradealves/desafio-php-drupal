@@ -1,0 +1,11 @@
+name: 'Blog Tools'
+description: ''
+package: Khipo
+core_version_requirement: ^8 || ^9 || ^10
+type: module
+version: '1.0'
+libraries:
+  - khipo_blog_tools/khipo_blog_tools
+dependencies:
+  - block
+  - khipo_blog_tools:khipo_blog_tools

@@ -1,0 +1,23 @@
+
+<div class="blog_tools_block mt-5">
+   <div class="container-fluid">
+      {% if label_display == 'visible' %}
+         <h3 class="section-title text-center mb-4">{{configuration.label}}</h3>
+      {% endif %}
+
+      <div class="author-block d-flex align-items-center">
+         {% if author.user_picture_rendered %}
+            <img src="{{author.user_picture_rendered}}" alt="{{author.name.value}}" loading="lazy" class="img-fluid profile-picture" />
+         {% endif %}
+         <span class="d-flex flex-column">
+            <h2 class="title">{{author.name.value}}</h2>
+            <p class="text">
+               <a href="mailto:{{author.mail.value}}" title="{{author.mail.value}}">{{author.mail.value}}</a>
+            </p>
+            <span class="text">
+               {{author.field_descricao.value|raw}}
+            </span>
+         </span>
+      </div>
+   </div>
+</div>

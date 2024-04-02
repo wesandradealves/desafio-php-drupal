@@ -1,0 +1,29 @@
+<?php 
+
+use Drupal\taxonomy\Entity\Term;
+
+function khipo_blog_tools_preprocess_page(&$variables) {
+  $variables['#attached']['library'][] = 'khipo_blog_tools/style';
+}
+
+function khipo_blog_tools_theme($existing, $type, $theme, $path) {
+  return [
+    'khipo_blog_tools' => [
+      'variables' => [
+        'configuration' => array(),
+        'author' => null,
+        'label_display' => null,
+      ],    
+    ],
+  ];
+}
+
+function khipo_blog_tools_install() {
+}
+
+function khipo_blog_tools_uninstall() {
+}
+
+function khipo_blog_tools_preprocess_block__khipo_blog_tools(&$variables) {
+  $variables['configuration'] = $variables['elements']['#configuration'];
+}

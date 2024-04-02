@@ -1,0 +1,21 @@
+uuid: 146a7fa4-b195-455b-b0ff-d3405cc9939d
+langcode: pt-br
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_descricao
+  module:
+    - text
+    - user
+id: user.user.field_descricao
+field_name: field_descricao
+entity_type: user
+bundle: user
+label: Descrição
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

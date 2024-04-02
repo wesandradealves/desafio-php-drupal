@@ -1,0 +1,9 @@
+khipo_blog_tools:
+  dependencies:
+    - core/jquery
+    - core/drupal
+  js:
+    assets/js/scripts.js: {}
+  css:
+    theme:
+      assets/css/style.scss: {}

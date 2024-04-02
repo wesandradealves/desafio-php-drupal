@@ -1,0 +1,5 @@
+services:
+  khipo_blog_tools.twig:
+    class: Drupal\khipo_blog_tools\Utils
+    tags:
+      - { name: twig.extension }    

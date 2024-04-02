@@ -1,0 +1,27 @@
+@mixin toRem($property, $value) {
+    #{$property}: ($value / 16) + rem;
+}
+
+$palettes: (
+    primary: (base: #0c0c0c, dark: #3c3c3c, medium: #a7a7a7, light: #cecece),
+    secondary: (base: #af72f6, dark: #29173c, light: #dabaff),
+);
+
+@function color($color,$tone){
+
+    @if map-has-key($palettes,$color){
+        $color: map-get($palettes,$color);
+
+            @if map-has-key($color,$tone){
+                $tone: map-get($color,$tone);
+                @return $tone;
+            }
+
+            @warn "unknown tone `#{$tone}` in color";
+            @return null;        
+    }
+
+    @warn "unknown color `#{$color}` in palette";
+    @return null;
+   
+}

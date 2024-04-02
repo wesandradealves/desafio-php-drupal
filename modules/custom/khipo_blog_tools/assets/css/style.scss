@@ -1,0 +1,38 @@
+@import "util";
+@import "variables";
+@import "breakpoints";
+
+.author-block {
+    max-width: 814px;
+    margin: 0 auto;
+    gap: 0 24px;
+    border-top:  1px rgba(0,0,0,.1) solid;
+    border-bottom:  1px rgba(0,0,0,.1) solid;
+    padding: 25px 0;
+    .profile-picture {
+        border-radius: 999px;
+        height: 80px;
+        width: 80px;
+        object-fit: cover;
+    }
+    > span {
+        gap: 4px 0;
+        .title {
+            color: color(secondary, base);
+            @include toRem(font-size, 24);
+        }
+        .text {
+            color: color(primary, dark);
+            @include toRem(font-size, 14);
+            font-weight: 300;
+            a {
+                color: color(primary, medium);
+                text-decoration: underline;
+                &:hover {
+                    color: color(secondary, base);
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}

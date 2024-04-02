@@ -3,10 +3,12 @@ langcode: pt-br
 status: true
 dependencies:
   config:
+    - field.field.user.user.field_descricao
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
     - image
+    - text
     - user
 _core:
   default_config_hash: mZLyuWM9CQx2ZJVqFGSbzgFnHzudVbHBYmdU256A5Wk
@@ -15,6 +17,13 @@ targetEntityType: user
 bundle: user
 mode: default
 content:
+  field_descricao:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
   member_for:
     weight: 5
     region: content
@@ -31,3 +40,4 @@ content:
     region: content
 hidden:
   langcode: true
+  search_api_excerpt: true

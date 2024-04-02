@@ -3,10 +3,13 @@ langcode: pt-br
 status: true
 dependencies:
   config:
+    - field.field.user.user.field_descricao
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
     - image
+    - path
+    - text
     - user
 _core:
   default_config_hash: FaQ9Ptcpxpg30AtiqRDtl_8zbJArHP1LPfug_s59TOA
@@ -16,24 +19,34 @@ bundle: user
 mode: default
 content:
   account:
-    weight: -10
+    weight: 3
     region: content
-  contact:
-    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+  field_descricao:
+    type: text_textarea
+    weight: 1
     region: content
-  language:
-    weight: 0
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 4
     region: content
-  timezone:
-    weight: 6
-    region: content
+    settings: {  }
+    third_party_settings: {  }
   user_picture:
     type: image_image
-    weight: -1
+    weight: 0
     region: content
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
 hidden:
+  contact: true
   langcode: true
+  language: true
+  timezone: true

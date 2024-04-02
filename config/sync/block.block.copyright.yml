@@ -1,0 +1,25 @@
+uuid: ccc2fe21-9703-4451-93b2-30d9b864c409
+langcode: pt-br
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:c6c3ab00-10c8-4ed9-811a-cdae5209255a'
+  module:
+    - block_content
+  theme:
+    - khipo
+id: copyright
+theme: khipo
+region: footer
+weight: -2
+provider: null
+plugin: 'block_content:c6c3ab00-10c8-4ed9-811a-cdae5209255a'
+settings:
+  id: 'block_content:c6c3ab00-10c8-4ed9-811a-cdae5209255a'
+  label: Copyright
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
