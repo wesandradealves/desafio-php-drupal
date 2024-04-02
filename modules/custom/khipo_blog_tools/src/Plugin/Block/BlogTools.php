@@ -4,7 +4,6 @@ namespace Drupal\khipo_blog_tools\Plugin\Block;
 
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Block\BlockBase;
-use Drupal\comment\Entity\Comment;
 
 /**
  * Provides a 'Simple message' Block.
